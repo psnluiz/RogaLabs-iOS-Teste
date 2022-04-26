@@ -9,5 +9,8 @@ import Foundation
 
 struct K {
     static let appTitle = "📨 Poster App"
-    
+    static let postsSegue = "WelcomeToPosts"
+    static let postsApiURL = "https://jsonplaceholder.typicode.com/posts"
+    static let cellIdentifier = "ReusableCell"
+    static let cellNibName = "PostCell"
 }

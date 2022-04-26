@@ -7,18 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A80EB3E08A12A9718225F03 /* Pods_RogaLabs_iOS_Teste.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD7AA1826221426063945BBD /* Pods_RogaLabs_iOS_Teste.framework */; };
 		B64B9A38281654B100D5605A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64B9A37281654B100D5605A /* AppDelegate.swift */; };
 		B64B9A3A281654B100D5605A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64B9A39281654B100D5605A /* SceneDelegate.swift */; };
 		B64B9A3C281654B100D5605A /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64B9A3B281654B100D5605A /* WelcomeViewController.swift */; };
 		B64B9A3F281654B100D5605A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B64B9A3D281654B100D5605A /* Main.storyboard */; };
 		B64B9A41281654B600D5605A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B64B9A40281654B600D5605A /* Assets.xcassets */; };
 		B64B9A44281654B600D5605A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B64B9A42281654B600D5605A /* LaunchScreen.storyboard */; };
-		B6DCFD7D281715A600F1A941 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DCFD7C281715A600F1A941 /* Post.swift */; };
-		B6DCFD802817174200F1A941 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DCFD7F2817174200F1A941 /* Comment.swift */; };
+		B6DCFD7D281715A600F1A941 /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DCFD7C281715A600F1A941 /* PostData.swift */; };
 		B6DCFD8228171F9400F1A941 /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DCFD8128171F9400F1A941 /* K.swift */; };
+		B6DCFD8628172B8B00F1A941 /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DCFD8528172B8B00F1A941 /* PostsViewController.swift */; };
+		B6DCFD882817955600F1A941 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DCFD872817955500F1A941 /* Manager.swift */; };
+		B6DCFD8F2817C08A00F1A941 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DCFD8D2817C08A00F1A941 /* PostCell.swift */; };
+		B6DCFD902817C08A00F1A941 /* PostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6DCFD8E2817C08A00F1A941 /* PostCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8E26C05C5286012427FF9053 /* Pods-RogaLabs-iOS-Teste.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RogaLabs-iOS-Teste.debug.xcconfig"; path = "Target Support Files/Pods-RogaLabs-iOS-Teste/Pods-RogaLabs-iOS-Teste.debug.xcconfig"; sourceTree = "<group>"; };
+		A45C6345C5411EF2FC4589F8 /* Pods-RogaLabs-iOS-Teste.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RogaLabs-iOS-Teste.release.xcconfig"; path = "Target Support Files/Pods-RogaLabs-iOS-Teste/Pods-RogaLabs-iOS-Teste.release.xcconfig"; sourceTree = "<group>"; };
 		B64B9A34281654B000D5605A /* RogaLabs-iOS-Teste.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RogaLabs-iOS-Teste.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B64B9A37281654B100D5605A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B64B9A39281654B100D5605A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -27,9 +33,13 @@
 		B64B9A40281654B600D5605A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B64B9A43281654B600D5605A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B64B9A45281654B600D5605A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B6DCFD7C281715A600F1A941 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
-		B6DCFD7F2817174200F1A941 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		B6DCFD7C281715A600F1A941 /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
 		B6DCFD8128171F9400F1A941 /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
+		B6DCFD8528172B8B00F1A941 /* PostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
+		B6DCFD872817955500F1A941 /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
+		B6DCFD8D2817C08A00F1A941 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		B6DCFD8E2817C08A00F1A941 /* PostCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostCell.xib; sourceTree = "<group>"; };
+		DD7AA1826221426063945BBD /* Pods_RogaLabs_iOS_Teste.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RogaLabs_iOS_Teste.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,17 +47,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A80EB3E08A12A9718225F03 /* Pods_RogaLabs_iOS_Teste.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		891D9CC52B868AFB32713B34 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8E26C05C5286012427FF9053 /* Pods-RogaLabs-iOS-Teste.debug.xcconfig */,
+				A45C6345C5411EF2FC4589F8 /* Pods-RogaLabs-iOS-Teste.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		B64B9A2B281654B000D5605A = {
 			isa = PBXGroup;
 			children = (
 				B64B9A36281654B100D5605A /* RogaLabs-iOS-Teste */,
 				B64B9A35281654B000D5605A /* Products */,
+				891D9CC52B868AFB32713B34 /* Pods */,
+				B790600D9DDC5F490E0DD985 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +101,8 @@
 			isa = PBXGroup;
 			children = (
 				B64B9A3D281654B100D5605A /* Main.storyboard */,
+				B6DCFD8D2817C08A00F1A941 /* PostCell.swift */,
+				B6DCFD8E2817C08A00F1A941 /* PostCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -87,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				B64B9A3B281654B100D5605A /* WelcomeViewController.swift */,
+				B6DCFD8528172B8B00F1A941 /* PostsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -94,10 +119,18 @@
 		B6DCFD7E281715B900F1A941 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				B6DCFD7C281715A600F1A941 /* Post.swift */,
-				B6DCFD7F2817174200F1A941 /* Comment.swift */,
+				B6DCFD7C281715A600F1A941 /* PostData.swift */,
+				B6DCFD872817955500F1A941 /* Manager.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		B790600D9DDC5F490E0DD985 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DD7AA1826221426063945BBD /* Pods_RogaLabs_iOS_Teste.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -107,9 +140,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B64B9A48281654B600D5605A /* Build configuration list for PBXNativeTarget "RogaLabs-iOS-Teste" */;
 			buildPhases = (
+				006D5B1364AD3D4A9C74B5CB /* [CP] Check Pods Manifest.lock */,
 				B64B9A30281654B000D5605A /* Sources */,
 				B64B9A31281654B000D5605A /* Frameworks */,
 				B64B9A32281654B000D5605A /* Resources */,
+				7CA7CBDC5D9A4903D7BC8DCD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -161,22 +196,67 @@
 				B64B9A44281654B600D5605A /* LaunchScreen.storyboard in Resources */,
 				B64B9A41281654B600D5605A /* Assets.xcassets in Resources */,
 				B64B9A3F281654B100D5605A /* Main.storyboard in Resources */,
+				B6DCFD902817C08A00F1A941 /* PostCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		006D5B1364AD3D4A9C74B5CB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RogaLabs-iOS-Teste-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7CA7CBDC5D9A4903D7BC8DCD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RogaLabs-iOS-Teste/Pods-RogaLabs-iOS-Teste-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RogaLabs-iOS-Teste/Pods-RogaLabs-iOS-Teste-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RogaLabs-iOS-Teste/Pods-RogaLabs-iOS-Teste-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B64B9A30281654B000D5605A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6DCFD802817174200F1A941 /* Comment.swift in Sources */,
+				B6DCFD8628172B8B00F1A941 /* PostsViewController.swift in Sources */,
 				B64B9A3C281654B100D5605A /* WelcomeViewController.swift in Sources */,
+				B6DCFD882817955600F1A941 /* Manager.swift in Sources */,
 				B64B9A38281654B100D5605A /* AppDelegate.swift in Sources */,
+				B6DCFD8F2817C08A00F1A941 /* PostCell.swift in Sources */,
 				B6DCFD8228171F9400F1A941 /* K.swift in Sources */,
 				B64B9A3A281654B100D5605A /* SceneDelegate.swift in Sources */,
-				B6DCFD7D281715A600F1A941 /* Post.swift in Sources */,
+				B6DCFD7D281715A600F1A941 /* PostData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,6 +400,7 @@
 		};
 		B64B9A49281654B600D5605A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E26C05C5286012427FF9053 /* Pods-RogaLabs-iOS-Teste.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -347,6 +428,7 @@
 		};
 		B64B9A4A281654B600D5605A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A45C6345C5411EF2FC4589F8 /* Pods-RogaLabs-iOS-Teste.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
