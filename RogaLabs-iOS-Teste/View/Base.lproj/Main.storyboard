@@ -191,6 +191,7 @@
                     </visualEffectView>
                     <connections>
                         <outlet property="commentsTableView" destination="ekS-U2-efK" id="Y6U-of-32b"/>
+                        <outlet property="postTitleLabel" destination="id7-Vx-Pae" id="7Ch-WB-KBa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5L2-le-XTD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

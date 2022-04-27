@@ -27,9 +27,11 @@ class PostsViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destinationVC = segue.destination as? CommentModalViewController {
-            let post = sender as! Post
-            destinationVC.comments = post.comments!
+        if segue.identifier == K.commentsSegue {
+            if let destinationVC = segue.destination as? CommentModalViewController {
+                let index = sender as! Int
+                destinationVC.post = posts[index]
+            }
         }
     }
 }
@@ -44,7 +46,7 @@ extension PostsViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: K.postCellIdentifier, for: indexPath) as! PostCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: K.postCellIdentifier, for: indexPath) as? PostCell else {return UITableViewCell()}
         
         cell.titleLabel.text = self.posts[indexPath.row].title
         cell.bodyLabel.text = self.posts[indexPath.row].body
@@ -55,12 +57,14 @@ extension PostsViewController: UITableViewDataSource {
 extension PostsViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //print(indexPath)
-        performSegue(withIdentifier: K.commentsSegue, sender: posts[indexPath.row])
+        performSegue(withIdentifier: K.commentsSegue, sender: indexPath.row)
     }
 }
 
 extension PostsViewController: ManagerDelegate {
+    func didUpdateComments(_ manager: Manager, comments: [Comment]) {
+        return
+    }
     
     func didUpdatePosts(_ manager: Manager, posts: [Post]) {
         self.posts = posts

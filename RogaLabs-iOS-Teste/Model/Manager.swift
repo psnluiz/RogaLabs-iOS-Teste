@@ -9,6 +9,7 @@ import Foundation
 
 protocol ManagerDelegate {
     func didUpdatePosts(_ manager: Manager, posts: [Post])
+    func didUpdateComments(_ manager: Manager, comments: [Comment])
     func didFailWithError(error: Error)
 }
 
@@ -17,7 +18,6 @@ protocol ManagerDelegate {
 class Manager {
     
     var delegate: ManagerDelegate?
-    var comments: [Comment] = []
     
     func fetchPosts(with urlString: String) {
         if let url = URL(string: urlString) {
@@ -51,9 +51,7 @@ class Manager {
                 let title = decodedData[n].title
                 let body = decodedData[n].body
                 
-                self.fetchComments(for: id)
-                
-                let post = Post(userId: userId, id: id, title: title, body: body, comments: self.comments)
+                let post = Post(userId: userId, id: id, title: title, body: body)
                 posts.append(post)
             }
             return posts
@@ -74,8 +72,8 @@ class Manager {
                 }
                 
                 if let safeData = data {
-                    if let parsedComments = self.parseCommentsJSON(commentsData: safeData) {
-                        self.comments = parsedComments
+                    if let comments = self.parseCommentsJSON(commentsData: safeData) {
+                        self.delegate?.didUpdateComments(self, comments: comments)
                     }
                 }
             }
