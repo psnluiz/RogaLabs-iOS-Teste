@@ -14,6 +14,9 @@
 		B64B9A3F281654B100D5605A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B64B9A3D281654B100D5605A /* Main.storyboard */; };
 		B64B9A41281654B600D5605A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B64B9A40281654B600D5605A /* Assets.xcassets */; };
 		B64B9A44281654B600D5605A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B64B9A42281654B600D5605A /* LaunchScreen.storyboard */; };
+		B67F43B12818B1C8001ABC43 /* CommentModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67F43B02818B1C8001ABC43 /* CommentModalViewController.swift */; };
+		B67F43B62818D1D4001ABC43 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67F43B42818D1D4001ABC43 /* CommentCell.swift */; };
+		B67F43B72818D1D4001ABC43 /* CommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B67F43B52818D1D4001ABC43 /* CommentCell.xib */; };
 		B6DCFD7D281715A600F1A941 /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DCFD7C281715A600F1A941 /* PostData.swift */; };
 		B6DCFD8228171F9400F1A941 /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DCFD8128171F9400F1A941 /* K.swift */; };
 		B6DCFD8628172B8B00F1A941 /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DCFD8528172B8B00F1A941 /* PostsViewController.swift */; };
@@ -33,6 +36,9 @@
 		B64B9A40281654B600D5605A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B64B9A43281654B600D5605A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B64B9A45281654B600D5605A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B67F43B02818B1C8001ABC43 /* CommentModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentModalViewController.swift; sourceTree = "<group>"; };
+		B67F43B42818D1D4001ABC43 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
+		B67F43B52818D1D4001ABC43 /* CommentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentCell.xib; sourceTree = "<group>"; };
 		B6DCFD7C281715A600F1A941 /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
 		B6DCFD8128171F9400F1A941 /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
 		B6DCFD8528172B8B00F1A941 /* PostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +109,8 @@
 				B64B9A3D281654B100D5605A /* Main.storyboard */,
 				B6DCFD8D2817C08A00F1A941 /* PostCell.swift */,
 				B6DCFD8E2817C08A00F1A941 /* PostCell.xib */,
+				B67F43B42818D1D4001ABC43 /* CommentCell.swift */,
+				B67F43B52818D1D4001ABC43 /* CommentCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -112,6 +120,7 @@
 			children = (
 				B64B9A3B281654B100D5605A /* WelcomeViewController.swift */,
 				B6DCFD8528172B8B00F1A941 /* PostsViewController.swift */,
+				B67F43B02818B1C8001ABC43 /* CommentModalViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -193,6 +202,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B67F43B72818D1D4001ABC43 /* CommentCell.xib in Resources */,
 				B64B9A44281654B600D5605A /* LaunchScreen.storyboard in Resources */,
 				B64B9A41281654B600D5605A /* Assets.xcassets in Resources */,
 				B64B9A3F281654B100D5605A /* Main.storyboard in Resources */,
@@ -254,6 +264,8 @@
 				B6DCFD882817955600F1A941 /* Manager.swift in Sources */,
 				B64B9A38281654B100D5605A /* AppDelegate.swift in Sources */,
 				B6DCFD8F2817C08A00F1A941 /* PostCell.swift in Sources */,
+				B67F43B62818D1D4001ABC43 /* CommentCell.swift in Sources */,
+				B67F43B12818B1C8001ABC43 /* CommentModalViewController.swift in Sources */,
 				B6DCFD8228171F9400F1A941 /* K.swift in Sources */,
 				B64B9A3A281654B100D5605A /* SceneDelegate.swift in Sources */,
 				B6DCFD7D281715A600F1A941 /* PostData.swift in Sources */,

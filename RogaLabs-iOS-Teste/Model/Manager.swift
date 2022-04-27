@@ -102,7 +102,7 @@ class Manager {
         } catch {
             delegate?.didFailWithError(error: error)
         }
-        return []
+        return nil
     }
     
 }
