@@ -74,8 +74,8 @@ class Manager {
                 }
                 
                 if let safeData = data {
-                    if let comments = self.parseCommentsJSON(commentsData: safeData) {
-                        self.comments = comments
+                    if let parsedComments = self.parseCommentsJSON(commentsData: safeData) {
+                        self.comments = parsedComments
                     }
                 }
             }

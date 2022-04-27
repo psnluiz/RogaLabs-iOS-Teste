@@ -78,9 +78,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="od9-Q5-0zJ" kind="presentation" identifier="PostToComments" trigger="accessoryAction" id="IO9-1Z-UeZ"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -118,6 +115,7 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="5kq-1F-9BA" id="gE6-4K-ird"/>
+                        <segue destination="od9-Q5-0zJ" kind="presentation" identifier="PostToComments" id="ac8-K6-xCM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bC5-qq-fP5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

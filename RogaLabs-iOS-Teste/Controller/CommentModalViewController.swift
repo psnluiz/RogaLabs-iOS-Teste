@@ -24,24 +24,25 @@ class CommentModalViewController: UIViewController {
 //        dismiss(animated: true, completion: nil)
 //    }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if let postsVC = segue.destination as? PostsViewController {
-//            posts = postsVC.posts
-//        }
-//    }
+    override func viewDidAppear(_ animated: Bool) {
+        print("Loading Comment view ---- \(comments) ----")
+        commentsTableView.reloadData()
+    }
 }
 
 extension CommentModalViewController:  UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print("Comments count --- \(comments.count)")
         return comments.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: K.commentCellIdentifier, for: indexPath) as! CommentCell
-        if comments.isEmpty{
+        if comments.isEmpty {
             print("No comments received")
             return cell
         } else {
+            print("populating Modal Labels")
             cell.nameLabel.text = comments[indexPath.row].name
             cell.emailLabel.text = comments[indexPath.row].email
             cell.bodyLabel.text = comments[indexPath.row].body

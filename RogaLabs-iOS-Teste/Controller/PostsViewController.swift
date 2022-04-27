@@ -18,6 +18,7 @@ class PostsViewController: UIViewController {
         super.viewDidLoad()
         
         tableView.dataSource = self
+        tableView.delegate = self
         manager.delegate = self
         
         tableView.register(UINib(nibName: K.postCellNibName, bundle: nil), forCellReuseIdentifier: K.postCellIdentifier)
@@ -26,8 +27,10 @@ class PostsViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard segue.identifier == K.commentsSegue else {return}
-        
+        if let destinationVC = segue.destination as? CommentModalViewController {
+            let post = sender as! Post
+            destinationVC.comments = post.comments!
+        }
     }
 }
 
@@ -52,10 +55,8 @@ extension PostsViewController: UITableViewDataSource {
 extension PostsViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //could do this setup at prepare for segue method
-        //let modalVC = CommentModalViewController()
-        //modalVC.comments = posts[indexPath.row].comments!
-        performSegue(withIdentifier: "PostToComments", sender: self)
+        //print(indexPath)
+        performSegue(withIdentifier: K.commentsSegue, sender: posts[indexPath.row])
     }
 }
 
@@ -66,7 +67,6 @@ extension PostsViewController: ManagerDelegate {
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }
-        
     }
     
     func didFailWithError(error: Error) {
