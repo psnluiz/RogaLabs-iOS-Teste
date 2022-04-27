@@ -21,19 +21,21 @@ class CommentModalViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         guard let postId = post?.id else {return}
-       manager.fetchComments(for: postId)
+        
+        commentsTableView.dataSource = self
+        manager.delegate = self
+        manager.fetchComments(for: postId)
     
-        commentsTableView.register(UINib(nibName: K.postCellNibName, bundle: nil), forCellReuseIdentifier: K.commentCellIdentifier)
+        commentsTableView.register(UINib(nibName: K.commentCellNibName, bundle: nil), forCellReuseIdentifier: K.commentCellIdentifier)
     }
     
-//    @IBAction func dismissModal(_ sender: Any) {
+    @IBAction func dismissModal(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    //    @IBAction func dismissModal(_ sender: Any) {
 //        dismiss(animated: true, completion: nil)
 //    }
     
-    override func viewDidAppear(_ animated: Bool) {
-        print("Inside Comment view ---- \(comments) ----")
-        commentsTableView.reloadData()
-    }
 }
 
 extension CommentModalViewController: ManagerDelegate {
@@ -60,9 +62,9 @@ extension CommentModalViewController:  UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: K.commentCellIdentifier, for: indexPath) as! CommentCell
-        print("populating Modal Labels")
-        cell.nameLabel.text = comments[indexPath.row].name
-        cell.emailLabel.text = comments[indexPath.row].email
+        
+        cell.nameLabel.text = "Name: \(comments[indexPath.row].name)"
+        cell.emailLabel.text = "Email: \(comments[indexPath.row].email)"
         cell.bodyLabel.text = comments[indexPath.row].body
         return cell
     }

@@ -137,6 +137,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                    <connections>
+                                        <action selector="dismissModal:" destination="od9-Q5-0zJ" eventType="touchUpInside" id="z1B-ZH-ga0"/>
+                                    </connections>
                                 </button>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3XW-dE-Zpf" userLabel="Modal">
                                     <rect key="frame" x="47" y="61" width="320" height="720"/>
@@ -161,6 +164,7 @@
                                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ekS-U2-efK">
                                             <rect key="frame" x="0.0" y="60" width="320" height="660"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <color key="separatorColor" name="gray"/>
                                         </tableView>
                                     </subviews>
                                     <color key="backgroundColor" name="purple"/>
